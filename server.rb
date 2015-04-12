@@ -2,9 +2,9 @@
 
 require 'sinatra'
 
-post "/" do
-	@email = params[:email]
-	@paswd = params[:paswd]
+post "/login" do
+	email = params['email']
+	paswd = params['paswd']
 
-	"#{@email} - #{@paswd}"
+	"What I got: #{email} - #{paswd} - #{Time.now}"
 end
